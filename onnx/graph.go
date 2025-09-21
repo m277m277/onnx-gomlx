@@ -269,6 +269,8 @@ func (m *Model) convertNode(ctx *context.Context, g *Graph, node *protos.NodePro
 		res = BitwiseNot(inputs[0])
 	case "Tanh":
 		res = Tanh(inputs[0])
+	case "Sigmoid":                    // ← 新增这两行
+    	res = Logistic(inputs[0])      // ← 新增这两行
 	case "Sin":
 		res = Sin(inputs[0])
 	case "Cos":
